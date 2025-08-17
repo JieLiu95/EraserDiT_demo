@@ -109,7 +109,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Video object removal and inpainting are critical tasks in the fields of computer vision and multimedia processing, aimed at restoring missing or corrupted regions in video sequences. Traditional methods predominantly rely on flow-based propagation and spatio-temporal Transformers, but these approaches face limitations in effectively leveraging long-term temporal features and ensuring temporal consistency in the completion results, particularly when dealing with large masks. Consequently, performance on extensive masked areas remains suboptimal. To address these challenges, this paper introduces a novel video inpainting approach leveraging the Diffusion Transformer (DiT). DiT synergistically combines the advantages of diffusion models and transformer architectures to maintain long-term temporal consistency while ensuring high-quality inpainting results. We propose a Circular Position-Shift strategy to further enhance long-term temporal consistency during the inference stage. Additionally, the proposed method automatically detects objects within videos, interactively removes specified objects, and generates corresponding prompts. In terms of processing speed, it takes only 180 seconds (testing on one NVIDIA A100 GPU) to complete a video with a resolution of 1080 × 1920 with 121 frames without any acceleration method. Experimental results indicate that the proposed method demonstrates superior performance in content fidelity, texture restoration, and temporal consistency.
+            Video object removal and inpainting are critical tasks in the fields of computer vision and multimedia processing, aimed at restoring missing or corrupted regions in video sequences. Traditional methods predominantly rely on flow-based propagation and spatio-temporal Transformers, but these approaches face limitations in effectively leveraging long-term temporal features and ensuring temporal consistency in the completion results, particularly when dealing with large masks. Consequently, performance on extensive masked areas remains suboptimal. To address these challenges, this paper introduces a novel video inpainting approach leveraging the Diffusion Transformer (DiT). DiT synergistically combines the advantages of diffusion models and transformer architectures to maintain long-term temporal consistency while ensuring high-quality inpainting results. We propose a Circular Position-Shift strategy to further enhance long-term temporal consistency during the inference stage. Additionally, the proposed method interactively removes specified objects, and generates corresponding prompts. In terms of processing speed, it takes only 65 seconds (testing on one NVIDIA H800 GPU) to complete a video with a resolution of 2160 × 2100 with 97 frames without any acceleration method. Experimental results indicate that the proposed method demonstrates superior performance in content fidelity, texture restoration, and temporal consistency.
           </p>
         </div>
       </div>
@@ -260,6 +260,48 @@
           <video poster="" id="video3" autoplay controls muted loop height="100%">\
             <!-- Your video file here -->
             <source src="videos/18.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">The compared results</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="videos/demo1_all.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="videos/demo4_all.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="videos/demo3_all.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="videos/demo2_all.mp4"
             type="video/mp4">
           </video>
         </div>
